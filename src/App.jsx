@@ -1,15 +1,11 @@
 import React from 'react'
 
-import Mouse from './components/common/Mouse'
+import Main from './pages/Main'
 
 import './styles/app.scss'
 
 function App() {
-    return (
-        <div className="page">
-            <Mouse />
-        </div>
-    )
+    return <Main />
 }
 
 export default App
