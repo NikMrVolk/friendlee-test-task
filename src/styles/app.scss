@@ -1,3 +1,32 @@
-.text {
-    color: red;
+$color-white: #d8e6f1;
+$color-black: #14161f;
+$color-bright: #fff557;
+
+.page {
+    min-height: 100svh;
+    background-color: $color-black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    transition: 300ms;
+    & .el {
+        color: $color-white;
+        font-size: 40px;
+        &:hover ~ .cursor {
+            transform: scale(1.66);
+        }
+    }
+}
+
+.cursor {
+    position: fixed;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: $color-bright;
+    transition: transform 300ms;
+    pointer-events: none;
+    mix-blend-mode: difference;
 }
