@@ -2,22 +2,15 @@ $color-white: #d8e6f1;
 $color-black: #14161f;
 $color-bright: #fff557;
 
-.page {
+.main-page {
+    color: $color-white;
     min-height: 100svh;
     background-color: $color-black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    transition: 300ms;
-    & .el {
-        color: $color-white;
-        font-size: 40px;
-        &:hover ~ .cursor {
-            transform: scale(1.66);
-        }
-    }
+}
+
+.block-wrapper {
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 .cursor {
@@ -30,3 +23,21 @@ $color-bright: #fff557;
     pointer-events: none;
     mix-blend-mode: difference;
 }
+
+@media (min-width: 1200px) {
+    .block-wrapper {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .block-wrapper {
+        padding-left: calc(50% - 760px);
+        padding-right: calc(50% - 760px);
+    }
+}
+
+// &:hover ~ .cursor {
+//     transform: scale(1.66);
+// }
