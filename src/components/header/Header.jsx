@@ -2,6 +2,7 @@ import React from 'react'
 
 import NavLink from '../UI/NavLink'
 import Burger from '../UI/Burger'
+import Button from '../UI/Button'
 
 export default function Header({ isBurgerActive, setIsBurgerActive, activateMouse, disableMouse }) {
     return (
@@ -48,7 +49,13 @@ export default function Header({ isBurgerActive, setIsBurgerActive, activateMous
                         />
                     </li>
                 </ul>
-                <button className="header__button button">Кнопка</button>
+                <Button
+                    wrapperClassName="header__button"
+                    activateMouse={activateMouse}
+                    disableMouse={disableMouse}
+                >
+                    Обсудить задачу
+                </Button>
             </nav>
         </header>
     )

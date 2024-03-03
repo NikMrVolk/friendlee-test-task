@@ -1,4 +1,6 @@
 $color-white: #d8e6f1;
+$color-white04: rgba(216, 230, 241, 0.4);
+$color-white00: rgba(216, 230, 241, 0);
 $color-black: #14161f;
 $color-bright: #fff557;
 
@@ -107,21 +109,79 @@ a {
     display: flex;
     justify-content: center;
 
-    &:hover &__text-top {
-        transform: rotate(30deg) translateY(-36px);
-    }
-    &:hover &__text-bottom {
-        transform: rotate(0deg) translateY(-36px);
-    }
     &__text-top {
         transform-origin: right;
         transition: transform 400ms;
+    }
+    &:hover &__text-top {
+        transform: rotate(30deg) translateY(-36px);
     }
     &__text-bottom {
         text-decoration: underline;
         transform: rotate(30deg);
         transform-origin: left;
         transition: transform 400ms;
+    }
+    &:hover &__text-bottom {
+        transform: rotate(0deg) translateY(-36px);
+    }
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: transparent;
+    padding: 20px 0 24px;
+    border: 2px solid $color-white04;
+    border-radius: 48px;
+    color: $color-white;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.04em;
+    position: relative;
+    z-index: 30;
+    overflow: hidden;
+    transition: 400ms;
+    &:hover {
+        border-color: $color-white00;
+        &::before {
+            transform: translateY(0px);
+        }
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        color: $color-black;
+        background-color: $color-bright;
+        transform: translateY(62px);
+        transition: 400ms;
+        border-radius: 48px;
+    }
+    &__body {
+        max-height: 18px;
+        overflow: hidden;
+    }
+    &__text-top {
+        transition: 400ms;
+        transform-origin: right;
+    }
+    &:hover &__text-top {
+        transform: rotate(30deg) translateY(-18px);
+    }
+    &__text-bottom {
+        transition: 400ms;
+        transform-origin: left;
+        transform: rotate(30deg);
+        color: $color-black;
+    }
+    &:hover &__text-bottom {
+        transform: rotate(0deg) translateY(-18px);
     }
 }
 
@@ -208,6 +268,14 @@ a {
         }
         &:hover &__text-bottom {
             transform: rotate(0deg) translateY(-18px);
+        }
+    }
+
+    .button {
+        min-width: 189px;
+        padding: 10px 0 14px;
+        &::before {
+            transform: translateY(42px);
         }
     }
 }
