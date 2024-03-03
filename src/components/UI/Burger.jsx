@@ -1,10 +1,18 @@
 import React from 'react'
 
-export default function Burger({ wrapperClassName = '', isBurgerActive, onToggle }) {
+export default function Burger({
+    wrapperClassName = '',
+    isBurgerActive,
+    onToggle,
+    activateMouse,
+    disableMouse,
+}) {
     return (
         <label
             className={`${wrapperClassName ? 'burger ' + wrapperClassName : 'burger'} `}
             onChange={onToggle}
+            onMouseEnter={activateMouse}
+            onMouseLeave={disableMouse}
         >
             <input type="checkbox" name="burger-checkbox" className="burger__checkbox" />
             <div

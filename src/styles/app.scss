@@ -135,6 +135,9 @@ a {
     transition: transform 300ms;
     pointer-events: none;
     mix-blend-mode: difference;
+    &__hover {
+        transform: scale(1.66);
+    }
 }
 
 @media (max-width: 1199px) {
@@ -221,7 +224,4 @@ a {
     font-size: 160px;
     margin-top: 400px;
     text-align: center;
-    &:hover ~ .cursor {
-        transform: scale(1.66);
-    }
 }
