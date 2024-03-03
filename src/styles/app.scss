@@ -2,10 +2,20 @@ $color-white: #d8e6f1;
 $color-black: #14161f;
 $color-bright: #fff557;
 
+a {
+    color: $color-white;
+}
+
 .main-page {
     color: $color-white;
     min-height: 100svh;
     background-color: $color-black;
+}
+
+.main-page-lock {
+    position: fixed;
+    top: 0;
+    width: 100svw;
 }
 
 .block-wrapper {
@@ -13,8 +23,71 @@ $color-bright: #fff557;
     padding-right: 16px;
 }
 
+.header {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__burger-checkbox {
+        display: none;
+    }
+    &__logo {
+        position: relative;
+        z-index: 30;
+    }
+    &__burger {
+        position: relative;
+        z-index: 30;
+    }
+    &__nav {
+        position: fixed;
+        inset: 0;
+        z-index: 10;
+        min-height: 100svh;
+        width: 100svw;
+        background-color: $color-black;
+        padding: 124px 16px 40px;
+        opacity: 0;
+        transform: translateX(-110%);
+        transition: opacity 0.4s, transform 0s 0.4s;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__nav-show {
+        opacity: 1;
+        transform: translateX(0);
+        transition: opacity 400ms, transform 0s;
+    }
+
+    &__nav-list {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+    &__nav-element {
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 120%;
+        letter-spacing: -6%;
+    }
+    &__wrapper-lock {
+        position: fixed;
+        top: 0;
+    }
+}
+
+.burger {
+    &__checkbox {
+        display: none;
+    }
+}
+
 .cursor {
     position: fixed;
+    z-index: 50;
     width: 24px;
     height: 24px;
     border-radius: 50%;
@@ -29,6 +102,18 @@ $color-bright: #fff557;
         padding-left: 40px;
         padding-right: 40px;
     }
+
+    .header {
+        padding-top: 34px;
+        padding-bottom: 34px;
+
+        &__burger {
+            display: none;
+        }
+        &__nav {
+            display: block;
+        }
+    }
 }
 
 @media (min-width: 1600px) {
@@ -38,6 +123,12 @@ $color-bright: #fff557;
     }
 }
 
-// &:hover ~ .cursor {
-//     transform: scale(1.66);
-// }
+// временно
+.mesto {
+    font-size: 160px;
+    margin-top: 400px;
+    text-align: center;
+    &:hover ~ .cursor {
+        transform: scale(1.66);
+    }
+}

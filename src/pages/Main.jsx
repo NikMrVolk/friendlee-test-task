@@ -1,21 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-import BlockWrapper from '../components/common/BlockWrapper'
 import Mouse from '../components/common/Mouse'
+import Header from '../components/header/Header'
 
 export default function Main() {
+    const [isBurgerActive, setIsBurgerActive] = useState(false)
+
     return (
-        <div className="main-page">
-            <header>
-                <BlockWrapper>
-                    <ul className="list">
-                        <li>1</li>
-                        <li>2</li>
-                        <li>3</li>
-                        <li>4</li>
-                    </ul>
-                </BlockWrapper>
-            </header>
+        <div className={`${isBurgerActive ? 'main-page main-page-lock' : 'main-page'}`}>
+            <Header isBurgerActive={isBurgerActive} setIsBurgerActive={setIsBurgerActive} />
+            <div className="mesto">Место</div>
             <Mouse />
         </div>
     )
