@@ -41,27 +41,6 @@ a {
         position: relative;
         z-index: 30;
     }
-    &__nav {
-        position: fixed;
-        inset: 0;
-        z-index: 10;
-        min-height: 100svh;
-        width: 100svw;
-        background-color: $color-black;
-        padding: 124px 16px 40px;
-        opacity: 0;
-        transform: translateX(-110%);
-        transition: opacity 0.4s, transform 0s 0.4s;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    &__nav-show {
-        opacity: 1;
-        transform: translateX(0);
-        transition: opacity 400ms, transform 0s;
-    }
-
     &__nav-list {
         display: flex;
         flex-direction: column;
@@ -71,7 +50,7 @@ a {
         font-size: 32px;
         font-weight: 500;
         line-height: 120%;
-        letter-spacing: -6%;
+        letter-spacing: -1.92px;
     }
     &__wrapper-lock {
         position: fixed;
@@ -97,6 +76,31 @@ a {
     mix-blend-mode: difference;
 }
 
+@media (max-width: 1199px) {
+    .header {
+        &__nav {
+            position: fixed;
+            inset: 0;
+            z-index: 10;
+            min-height: 100svh;
+            width: 100svw;
+            background-color: $color-black;
+            padding: 124px 16px 40px;
+            opacity: 0;
+            transform: translateX(-110%);
+            transition: opacity 0.4s, transform 0s 0.4s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        &__nav-show {
+            opacity: 1;
+            transform: translateX(0);
+            transition: opacity 400ms, transform 0s;
+        }
+    }
+}
+
 @media (min-width: 1200px) {
     .block-wrapper {
         padding-left: 40px;
@@ -106,12 +110,28 @@ a {
     .header {
         padding-top: 34px;
         padding-bottom: 34px;
-
         &__burger {
             display: none;
         }
         &__nav {
-            display: block;
+            display: flex;
+            align-items: center;
+            gap: 73.73px;
+        }
+        &__nav-list {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 80px;
+        }
+        &__nav-element:last-child {
+            margin-left: 135.38px;
+        }
+        &__nav-element {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 100%;
+            letter-spacing: -0.72px;
         }
     }
 }
