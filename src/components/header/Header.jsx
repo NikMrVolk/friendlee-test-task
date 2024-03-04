@@ -19,7 +19,7 @@ export default function Header({ isBurgerActive, setIsBurgerActive, activateMous
                 onMouseEnter={activateMouse}
                 onMouseLeave={disableMouse}
             >
-                <img src="./logo.png" alt="logo" className="header__logo-img" />
+                <img src="./logo.svg" alt="logo" className="header__logo-img" />
             </a>
             <Burger
                 wrapperClassName="header__burger"
