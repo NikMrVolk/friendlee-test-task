@@ -7,7 +7,7 @@ export const useMousePosition = () => {
         const mouseMove = (e) => {
             setMousePosition({
                 left: e.pageX - 12,
-                top: e.pageY - 12,
+                top: e.pageY - window.pageYOffset - 12,
             })
         }
 
