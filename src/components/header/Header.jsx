@@ -4,11 +4,15 @@ import NavLink from '../UI/NavLink'
 import Burger from '../UI/Burger'
 import Button from '../UI/Button'
 
+import { useScrollingUp } from '../../hooks/useScrollingUp'
+
 const navElements = ['Услуги', 'Кейсы', 'Контакты']
 
 export default function Header({ isBurgerActive, setIsBurgerActive, activateMouse, disableMouse }) {
+    const isScrollingUp = useScrollingUp()
+
     return (
-        <header className="header block-wrapper">
+        <header className={`header block-wrapper ${isScrollingUp ? 'header_isActive' : ''}`}>
             <a
                 href="/"
                 className="header__logo"

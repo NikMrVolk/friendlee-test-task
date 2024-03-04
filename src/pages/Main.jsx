@@ -16,13 +16,6 @@ export default function Main() {
                 activateMouse={activationMouseHover}
                 disableMouse={disableMouseHover}
             />
-            <div
-                className="mesto"
-                onMouseEnter={activationMouseHover}
-                onMouseLeave={disableMouseHover}
-            >
-                Место
-            </div>
             <Mouse isMouseHover={isMouseHover} />
         </div>
     )
