@@ -344,8 +344,22 @@ a {
 }
 
 .description {
-    min-height: 100svh;
-    background-color: $color-black;
+    &__body {
+        padding: 64px 0;
+    }
+    &__text {
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 90%;
+        letter-spacing: -0.04em;
+        text-align: center;
+    }
+    &__svg {
+        width: 32px;
+        height: 32px;
+        vertical-align: bottom;
+        margin: 0 8px 0 2px;
+    }
 }
 
 @media (min-width: 768px) {
@@ -362,6 +376,16 @@ a {
         &__svg {
             top: -20%;
             left: -80%;
+        }
+    }
+
+    .description {
+        &__body {
+            margin-bottom: 53px;
+        }
+        &__text {
+            max-width: 600px;
+            margin: 0 auto;
         }
     }
 }
@@ -477,6 +501,22 @@ a {
         &__svg {
             top: 0;
             left: -40%;
+        }
+    }
+
+    .description {
+        &__body {
+            padding: 154px 0;
+        }
+        &__text {
+            font-size: 76px;
+            max-width: 1260px;
+            margin: 0 auto;
+        }
+        &__svg {
+            width: 52px;
+            height: 52px;
+            margin: 0 14px 0 4px;
         }
     }
 }
