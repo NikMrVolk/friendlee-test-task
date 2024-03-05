@@ -27,6 +27,7 @@ a {
 
 .header {
     position: fixed;
+    z-index: 30;
     width: 100%;
     padding-top: 12px;
     padding-bottom: 12px;
@@ -220,13 +221,25 @@ a {
 .first-screen {
     min-height: 100svh;
     background-color: $color-bright;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: center;
-    gap: 32px;
-    padding-bottom: 16px;
     overflow: hidden;
+    &__body {
+        height: 100svh;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+    }
+    &__title-logo-wrapper {
+        min-height: 100svh;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+        gap: 32px;
+        padding-bottom: 16px;
+    }
     &__title {
         font-size: 31px;
         font-weight: 500;
@@ -234,10 +247,12 @@ a {
         letter-spacing: -0.04em;
         text-align: center;
         color: $color-black;
+        animation: title-to-top 1.2s linear forwards;
     }
     &__logo-wrapper {
         height: auto;
         width: 100%;
+        animation: logo-to-top 1.2s linear forwards;
     }
     &__logo-el {
         fill: $color-black;
@@ -245,6 +260,29 @@ a {
     &__ticker {
         color: $color-black;
         width: 200%;
+        position: absolute;
+        bottom: -100px;
+    }
+}
+
+@keyframes title-to-top {
+    0% {
+        opacity: 0;
+        transform: translateY(70px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes logo-to-top {
+    0% {
+        transform: translateY(130%);
+    }
+    100% {
+        transform: translateY(0);
     }
 }
 
@@ -293,6 +331,11 @@ a {
 }
 
 @media (min-width: 768px) {
+    .first-screen {
+        &__ticker {
+            bottom: -120px;
+        }
+    }
 }
 
 @media (max-width: 1199px) {
@@ -375,10 +418,15 @@ a {
     }
 
     .first-screen {
-        padding-bottom: 40px;
         gap: 58px;
         &__title {
             font-size: 47px;
+        }
+        &__title-logo-wrapper {
+            padding-bottom: 40px;
+        }
+        &__ticker {
+            bottom: -140px;
         }
     }
 
@@ -400,5 +448,10 @@ a {
     .block-wrapper {
         padding-left: calc(50% - 760px);
         padding-right: calc(50% - 760px);
+    }
+    .first-screen {
+        &__ticker {
+            bottom: -180px;
+        }
     }
 }
