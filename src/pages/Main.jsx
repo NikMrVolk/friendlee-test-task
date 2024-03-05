@@ -4,6 +4,7 @@ import Mouse from '../components/common/Mouse'
 import Header from '../components/header/Header'
 import LogoSvg from '../components/svg/LogoSvg'
 import Ticker from '../components/UI/Ticker'
+import SvgAnimation from '../components/animation/SvgAnimation'
 import { useMouseHover } from '../hooks/useMouseHover'
 import { useScrollY } from '../hooks/useScrollY'
 
@@ -62,6 +63,7 @@ export default function Main() {
                             }}
                         />
                     </div>
+                    <SvgAnimation />
                 </section>
                 <section className="description"></section>
             </main>
