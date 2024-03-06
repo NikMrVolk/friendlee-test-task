@@ -389,6 +389,26 @@ a {
     }
 }
 
+.services {
+    &__header {
+        display: flex;
+        flex-direction: column;
+        row-gap: 27px;
+    }
+    &__title {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 100%;
+        letter-spacing: -0.04em;
+        text-transform: uppercase;
+    }
+    &__switcher {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
 @media (min-width: 768px) {
     .first-screen {
         &__title {
@@ -416,6 +436,16 @@ a {
         }
         &__ticker-wrapper {
             top: -70%;
+        }
+    }
+
+    .services {
+        &__header {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        &__switcher {
+            width: 50%;
         }
     }
 }
@@ -552,6 +582,16 @@ a {
         &__ticker-element {
             font-size: 29px;
             min-width: 390px;
+        }
+    }
+
+    .services {
+        &__title {
+            font-size: 123px;
+        }
+        &__switcher {
+            width: 25%;
+            margin-right: 25%;
         }
     }
 }
