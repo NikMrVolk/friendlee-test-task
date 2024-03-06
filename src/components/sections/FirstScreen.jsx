@@ -42,7 +42,7 @@ export default function FirstScreen() {
                         wrapper: 'first-screen__ticker',
                         custom: 'first-screen__ticker-custom',
                         element: 'first-screen__ticker-element',
-                        imgWrapper: 'first-screen__ticker-img-wrapper'
+                        imgWrapper: 'first-screen__ticker-img-wrapper',
                     }}
                     imgSrc="/public/arrow.svg"
                     imgAlt="стрелка"
