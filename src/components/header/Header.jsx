@@ -2,7 +2,7 @@ import React from 'react'
 
 import NavLink from '../UI/NavLink'
 import Burger from '../UI/Burger'
-import Button from '../UI/Button'
+import Button from '../UI/buttons/Button'
 
 import { useScrollingUp } from '../../hooks/useScrollingUp'
 
