@@ -20,7 +20,6 @@ const tickerTexts = [
 export default function FirstScreen() {
     const scrollY = useScrollY(0)
 
-
     return (
         <section className="first-screen block-wrapper">
             <div
@@ -39,7 +38,12 @@ export default function FirstScreen() {
                 <Ticker
                     customText="Для"
                     elements={tickerTexts}
-                    wrapperClassName="first-screen__ticker"
+                    classes={{
+                        wrapper: 'first-screen__ticker',
+                        custom: 'first-screen__ticker-custom',
+                        element: 'first-screen__ticker-element',
+                        imgWrapper: 'first-screen__ticker-img-wrapper'
+                    }}
                     imgSrc="/public/arrow.svg"
                     imgAlt="стрелка"
                     style={{
