@@ -6,7 +6,9 @@ import FirstScreen from '../components/sections/FirstScreen'
 import Description from '../components/sections/Description'
 import BlockWrapper from '../components/common/BlockWrapper'
 import SwitchButton from '../components/UI/buttons/SwitchButton'
+import Card from '../components/cards/Card'
 import { useMouseHover } from '../hooks/useMouseHover'
+import { cardsData } from '../mock/cards'
 
 const switchElements = ['Для бизнеса', 'Для территории']
 
@@ -43,7 +45,25 @@ export default function Main() {
                             ))}
                         </div>
                     </div>
+                    <ul
+                        className={`services__card-list ${
+                            switchButtonValue === switchElements[0]
+                                ? 'services__card-list_show'
+                                : 'services__card-list_hide'
+                        }`}
+                    >
+                        {cardsData.map((el) => (
+                            <Card
+                                key={el.title}
+                                {...el}
+                                activateMouse={activationMouseHover}
+                                disableMouse={disableMouseHover}
+                            />
+                        ))}
+                    </ul>
                 </BlockWrapper>
+                <div style={{ height: '100vh' }}></div>
+                <div style={{ height: '100vh' }}></div>
             </main>
             <Mouse isMouseHover={isMouseHover} />
         </div>
