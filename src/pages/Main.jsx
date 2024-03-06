@@ -7,8 +7,9 @@ import Description from '../components/sections/Description'
 import BlockWrapper from '../components/common/BlockWrapper'
 import SwitchButton from '../components/UI/buttons/SwitchButton'
 import Card from '../components/cards/Card'
+import SmallCard from '../components/cards/SmallCard'
 import { useMouseHover } from '../hooks/useMouseHover'
-import { cardsData } from '../mock/cards'
+import { cardsData, smallCardsData } from '../mock/cards'
 
 const switchElements = ['Для бизнеса', 'Для территории']
 
@@ -54,6 +55,16 @@ export default function Main() {
                     >
                         {cardsData.map((el) => (
                             <Card
+                                key={el.title}
+                                {...el}
+                                activateMouse={activationMouseHover}
+                                disableMouse={disableMouseHover}
+                            />
+                        ))}
+                    </ul>
+                    <ul className="services__small-cards-list">
+                        {smallCardsData.map((el) => (
+                            <SmallCard
                                 key={el.title}
                                 {...el}
                                 activateMouse={activationMouseHover}

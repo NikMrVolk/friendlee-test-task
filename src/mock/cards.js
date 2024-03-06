@@ -1,6 +1,6 @@
-import ArrowSvg from "../components/svg/cards/ArrowSvg";
-import GlobeSvg from "../components/svg/cards/GlobeSvg";
-import StarSvg from "../components/svg/cards/StarSvg";
+import ArrowSvg from '../components/svg/cards/ArrowSvg'
+import GlobeSvg from '../components/svg/cards/GlobeSvg'
+import StarSvg from '../components/svg/cards/StarSvg'
 
 export const cardsData = [
     {
@@ -41,5 +41,20 @@ export const cardsData = [
             'Логотип и фирменный стиль',
             'Брендбук',
         ],
+    },
+]
+
+export const smallCardsData = [
+    {
+        title: 'Разработка сайта',
+        description: 'Когда пришла пора действовать, но не хватает самого главного',
+    },
+    {
+        title: 'Обучение',
+        description: 'Когда ваша цель - лично во всем разобраться и стать экспертом',
+    },
+    {
+        title: 'Консультации',
+        description: 'Когда хочется сделать своими руками, но остались важные вопросы',
     },
 ]

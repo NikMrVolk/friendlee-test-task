@@ -445,12 +445,21 @@ a {
         grid-template-columns: minmax(300px, 400px);
         justify-content: center;
         row-gap: 40px;
+        margin-bottom: 56px;
         &_show {
             animation: showCards 1.6s;
         }
         &_hide {
             animation: hideCards 1.6s;
         }
+    }
+    &__small-cards-list {
+        display: grid;
+        grid-template-columns: minmax(300px, 400px);
+        justify-content: center;
+        row-gap: 40px;
+        margin-bottom: 40px;
+
     }
 }
 
@@ -531,6 +540,41 @@ a {
     }
 }
 
+.small-card {
+    padding-bottom: 40px;
+    border-bottom: 2px solid $color-white;
+    transition: 400ms;
+    &:hover {
+        color: $color-bright;
+        border-color: $color-bright;
+    }
+    &:hover &__img {
+        fill: $color-bright;
+    }
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 24px;
+    }
+    &__title {
+        font-size: 21px;
+        font-weight: 500;
+        line-height: 100%;
+        letter-spacing: -0.06em;
+    }
+    &__image-wrapper {
+        width: 16px;
+        height: 16px;
+    }
+    &__text {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 140%;
+        letter-spacing: -0.04em;
+    }
+}
+
 @media (min-width: 768px) {
     .first-screen {
         &__title {
@@ -573,6 +617,10 @@ a {
         &__card-list {
             grid-template-columns: repeat(2, minmax(350px, 480px));
             column-gap: 16px;
+        }
+        &__small-cards-list {
+            grid-template-columns: repeat(3, minmax(200px, 480px));
+            column-gap: 40px;
         }
     }
 
@@ -749,6 +797,9 @@ a {
             animation: card3;
             animation-timeline: view();
         }
+        &__small-cards-list {
+            margin-bottom: 80px;
+        }
     }
 
     .card {
@@ -803,6 +854,15 @@ a {
             transition: max-height 600ms;
         }
         &__tag {
+            font-size: 18px;
+        }
+    }
+
+    .small-card {
+        &__title {
+            font-size: 29px;
+        }
+        &__text {
             font-size: 18px;
         }
     }
@@ -937,12 +997,4 @@ a {
         position: static;
         overflow: visible;
     }
-}
-
-.ddd {
-    animation: showCards 2s;
-}
-
-.ttt {
-    animation: hideCards 2s;
 }
