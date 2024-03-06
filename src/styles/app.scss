@@ -256,6 +256,21 @@ a {
     }
 }
 
+.button-gradient {
+    padding: 41px 0;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: -0.06em;
+    width: 100%;
+    overflow: hidden;
+    background-color: transparent;
+    background: linear-gradient(-45deg, #f2bc1c, #9c64fc);
+    background-size: 400% 400%;
+    animation: buttonGradient 10s ease infinite;
+    border-radius: 104px;
+}
+
 .cursor {
     position: fixed;
     z-index: 50;
@@ -462,7 +477,7 @@ a {
     }
     &__button {
         max-width: 186px;
-        margin: 0 auto;
+        margin: 0 auto 64px;
     }
 }
 
@@ -625,6 +640,9 @@ a {
             grid-template-columns: repeat(3, minmax(200px, 480px));
             column-gap: 40px;
         }
+        &__button {
+            margin-bottom: 56px;
+        }
     }
 
     .card {
@@ -720,6 +738,11 @@ a {
         font-size: 47px;
     }
 
+    .button-gradient {
+        font-size: 47px;
+        padding: 46px 0;
+    }
+
     .first-screen {
         &__title {
             font-size: 47px;
@@ -803,6 +826,9 @@ a {
         &__small-cards-list {
             margin-bottom: 80px;
         }
+        &__button {
+            margin-bottom: 82px;
+        }
     }
 
     .card {
@@ -883,6 +909,11 @@ a {
     }
     .card {
         max-width: 480px;
+    }
+    .services {
+        &__button {
+            margin-bottom: 154px;
+        }
     }
 }
 
@@ -999,5 +1030,17 @@ a {
         height: auto;
         position: static;
         overflow: visible;
+    }
+}
+
+@keyframes buttonGradient {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
     }
 }

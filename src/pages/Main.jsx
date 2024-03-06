@@ -11,6 +11,7 @@ import SmallCard from '../components/cards/SmallCard'
 import { useMouseHover } from '../hooks/useMouseHover'
 import { cardsData, smallCardsData } from '../mock/cards'
 import Button from '../components/UI/buttons/Button'
+import GradientButton from '../components/UI/buttons/GradientButton'
 
 const switchElements = ['Для бизнеса', 'Для территории']
 
@@ -80,6 +81,12 @@ export default function Main() {
                     >
                         Все услуги
                     </Button>
+                    <GradientButton
+                        activateMouse={activationMouseHover}
+                        disableMouse={disableMouseHover}
+                    >
+                        Обсудить задачу
+                    </GradientButton>
                 </BlockWrapper>
                 <div style={{ height: '100vh' }}></div>
                 <div style={{ height: '100vh' }}></div>
