@@ -10,6 +10,7 @@ import Card from '../components/cards/Card'
 import SmallCard from '../components/cards/SmallCard'
 import { useMouseHover } from '../hooks/useMouseHover'
 import { cardsData, smallCardsData } from '../mock/cards'
+import Button from '../components/UI/buttons/Button'
 
 const switchElements = ['Для бизнеса', 'Для территории']
 
@@ -72,6 +73,13 @@ export default function Main() {
                             />
                         ))}
                     </ul>
+                    <Button
+                        activateMouse={activationMouseHover}
+                        disableMouse={disableMouseHover}
+                        wrapperClassName="services__button"
+                    >
+                        Все услуги
+                    </Button>
                 </BlockWrapper>
                 <div style={{ height: '100vh' }}></div>
                 <div style={{ height: '100vh' }}></div>
