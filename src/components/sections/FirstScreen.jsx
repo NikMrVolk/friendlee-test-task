@@ -3,6 +3,7 @@ import React from 'react'
 import Ticker from '../UI/Ticker'
 import LogoSvg from '../svg/LogoSvg'
 import SvgAnimation from '../animation/SvgAnimation'
+import BlockWrapper from '../common/BlockWrapper'
 import { useScrollY } from '../../hooks/useScrollY'
 
 const tickerTexts = [
@@ -21,7 +22,7 @@ export default function FirstScreen() {
     const scrollY = useScrollY(0)
 
     return (
-        <section className="first-screen block-wrapper">
+        <BlockWrapper className="first-screen">
             <div
                 className="first-screen__body"
                 style={{
@@ -52,6 +53,6 @@ export default function FirstScreen() {
                 />
             </div>
             <SvgAnimation />
-        </section>
+        </BlockWrapper>
     )
 }

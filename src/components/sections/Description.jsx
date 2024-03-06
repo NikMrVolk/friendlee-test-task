@@ -2,6 +2,7 @@ import React from 'react'
 
 import Ticker from '../UI/Ticker'
 import EyeSvg from '../svg/EyeSvg'
+import BlockWrapper from '../common/BlockWrapper'
 import { useScrollY } from '../../hooks/useScrollY'
 
 const tickerElements = [
@@ -18,7 +19,7 @@ export default function Description() {
     const scrollY = useScrollY(0)
 
     return (
-        <section className="description block-wrapper">
+        <BlockWrapper className="description">
             <div className="description__body">
                 <p className="description__text">
                     Мы создаем <EyeSvg className="description__svg" />
@@ -42,6 +43,6 @@ export default function Description() {
                     }}
                 />
             </div>
-        </section>
+        </BlockWrapper>
     )
 }
