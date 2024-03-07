@@ -1121,11 +1121,14 @@ a {
 }
 
 @keyframes card1 {
-    from {
-        transform: translateY(-30px);
+    0% {
+        transform: translateY(0);
     }
-    to {
-        transform: translateY(0px);
+    50% {
+        transform: translateY(30px);
+    }
+    100% {
+        transform: translateY(0);
     }
 }
 
@@ -1151,22 +1154,13 @@ a {
     0% {
         transform: translateY(0px);
         opacity: 1;
-        width: auto;
-        height: auto;
-        position: static;
-        overflow: visible;
     }
     25% {
         opacity: 0.5;
     }
     50% {
         transform: translateY(200px);
-        position: absolute;
-        top: 0;
-        width: 1px;
-        height: 1px;
         opacity: 0;
-        overflow: hidden;
     }
     75% {
         opacity: 0.5;
@@ -1174,10 +1168,6 @@ a {
     100% {
         transform: translateY(0px);
         opacity: 1;
-        width: auto;
-        height: auto;
-        position: static;
-        overflow: visible;
     }
 }
 
@@ -1185,22 +1175,13 @@ a {
     0% {
         transform: translateY(0px);
         opacity: 1;
-        width: auto;
-        height: auto;
-        position: static;
-        overflow: visible;
     }
     25% {
         opacity: 0.5;
     }
     50% {
         transform: translateY(200px);
-        position: absolute;
-        top: 0;
-        width: 1px;
-        height: 1px;
         opacity: 0;
-        overflow: hidden;
     }
     75% {
         opacity: 0.5;
@@ -1208,10 +1189,6 @@ a {
     100% {
         transform: translateY(0px);
         opacity: 1;
-        width: auto;
-        height: auto;
-        position: static;
-        overflow: visible;
     }
 }
 
