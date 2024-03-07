@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import SmallStarSvg from '../svg/cards/SmallStarSvg'
 
-export default function SmallCard({ title, description, activateMouse, disableMouse }) {
+import { LayoutContext } from '../../context/LayoutContext'
+
+export default function SmallCard({ title, description }) {
+    const { activationMouseHover, disableMouseHover } = useContext(LayoutContext)
+
     return (
-        <li className="small-card" onMouseEnter={activateMouse} onMouseLeave={disableMouse}>
+        <li
+            className="small-card"
+            onMouseEnter={activationMouseHover}
+            onMouseLeave={disableMouseHover}
+        >
             <div className="small-card__header">
                 <h3 className="small-card__title">{title}</h3>
                 <div className="small-card__image-wrapper">

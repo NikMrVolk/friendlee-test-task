@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
-export default function GradientButton({ children, activateMouse, disableMouse }) {
+import { LayoutContext } from '../../../context/LayoutContext'
+
+export default function GradientButton({ children }) {
+    const { activationMouseHover, disableMouseHover } = useContext(LayoutContext)
+
     return (
         <button
             className="button-gradient"
-            onMouseEnter={activateMouse}
-            onMouseLeave={disableMouse}
+            onMouseEnter={activationMouseHover}
+            onMouseLeave={disableMouseHover}
         >
             {children}
         </button>

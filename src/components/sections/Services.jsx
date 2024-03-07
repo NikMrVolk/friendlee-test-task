@@ -11,7 +11,7 @@ import { cardsData, smallCardsData } from '../../mock/cards'
 
 const switchElements = ['Для бизнеса', 'Для территории']
 
-export default function Services({ activateMouse, disableMouse }) {
+export default function Services() {
     const [switchButtonValue, setSwitchButtonValue] = useState(switchElements[0])
 
     return (
@@ -24,8 +24,6 @@ export default function Services({ activateMouse, disableMouse }) {
                             key={el}
                             isActive={el === switchButtonValue}
                             onClick={() => setSwitchButtonValue(el)}
-                            activateMouse={activateMouse}
-                            disableMouse={disableMouse}
                         >
                             {el}
                         </SwitchButton>
@@ -40,34 +38,16 @@ export default function Services({ activateMouse, disableMouse }) {
                 }`}
             >
                 {cardsData.map((el) => (
-                    <Card
-                        key={el.title}
-                        {...el}
-                        activateMouse={activateMouse}
-                        disableMouse={disableMouse}
-                    />
+                    <Card key={el.title} {...el} />
                 ))}
             </ul>
             <ul className="services__small-cards-list">
                 {smallCardsData.map((el) => (
-                    <SmallCard
-                        key={el.title}
-                        {...el}
-                        activateMouse={activateMouse}
-                        disableMouse={disableMouse}
-                    />
+                    <SmallCard key={el.title} {...el} />
                 ))}
             </ul>
-            <Button
-                activateMouse={activateMouse}
-                disableMouse={disableMouse}
-                wrapperClassName="services__button"
-            >
-                Все услуги
-            </Button>
-            <GradientButton activateMouse={activateMouse} disableMouse={disableMouse}>
-                Обсудить задачу
-            </GradientButton>
+            <Button wrapperClassName="services__button">Все услуги</Button>
+            <GradientButton>Обсудить задачу</GradientButton>
         </BlockWrapper>
     )
 }

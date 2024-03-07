@@ -1,7 +1,10 @@
-import React from 'react'
-import { useMousePosition } from '../../hooks/useMousePosition'
+import React, { useContext } from 'react'
 
-export default function Mouse({ isMouseHover }) {
+import { useMousePosition } from '../../hooks/useMousePosition'
+import { LayoutContext } from '../../context/LayoutContext'
+
+export default function Mouse() {
+    const {isMouseHover} = useContext(LayoutContext)
     const { left, top } = useMousePosition()
 
     return (

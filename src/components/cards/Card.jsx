@@ -1,10 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
-export default function Card({ svg, title, subtitle, text, tags, activateMouse, disableMouse }) {
+import { LayoutContext } from '../../context/LayoutContext'
+
+export default function Card({ svg, title, subtitle, text, tags }) {
+    const { activationMouseHover, disableMouseHover } = useContext(LayoutContext)
+
     const svgElement = svg({ className: 'card__img' })
 
     return (
-        <li className="card" key={title} onMouseEnter={activateMouse} onMouseLeave={disableMouse}>
+        <li
+            className="card"
+            key={title}
+            onMouseEnter={activationMouseHover}
+            onMouseLeave={disableMouseHover}
+        >
             <div className="card__header">
                 <h3 className="card__title">{title}</h3>
                 <div className="card__image-wrapper">{svgElement}</div>

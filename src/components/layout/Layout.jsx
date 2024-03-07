@@ -12,20 +12,20 @@ export default function Layout({ children }) {
     const { isMouseHover, activationMouseHover, disableMouseHover } = useMouseHover()
 
     return (
-        <LayoutContext.Provider value={{ activationMouseHover, disableMouseHover }}>
+        <LayoutContext.Provider
+            value={{
+                activationMouseHover,
+                disableMouseHover,
+                isMouseHover,
+                isBurgerActive,
+                setIsBurgerActive,
+            }}
+        >
             <div className={`${isBurgerActive ? 'main-page main-page-lock' : 'main-page'}`}>
-                <Header
-                    isBurgerActive={isBurgerActive}
-                    setIsBurgerActive={setIsBurgerActive}
-                    activateMouse={activationMouseHover}
-                    disableMouse={disableMouseHover}
-                />
+                <Header />
                 {children}
-                <Footer
-                    activationMouseHover={activationMouseHover}
-                    disableMouseHover={disableMouseHover}
-                />
-                <Mouse isMouseHover={isMouseHover} />
+                <Footer />
+                <Mouse />
             </div>
         </LayoutContext.Provider>
     )

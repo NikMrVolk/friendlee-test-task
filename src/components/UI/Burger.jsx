@@ -1,18 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
-export default function Burger({
-    wrapperClassName = '',
-    isBurgerActive,
-    onToggle,
-    activateMouse,
-    disableMouse,
-}) {
+import { LayoutContext } from '../../context/LayoutContext'
+
+export default function Burger({ wrapperClassName = '' }) {
+    const { activationMouseHover, disableMouseHover, isBurgerActive, setIsBurgerActive } =
+        useContext(LayoutContext)
+
     return (
         <label
             className={`${wrapperClassName ? 'burger ' + wrapperClassName : 'burger'} `}
-            onChange={onToggle}
-            onMouseEnter={activateMouse}
-            onMouseLeave={disableMouse}
+            onChange={(e) => setIsBurgerActive(e.target.checked)}
+            onMouseEnter={activationMouseHover}
+            onMouseLeave={disableMouseHover}
         >
             <input type="checkbox" name="burger-checkbox" className="burger__checkbox" />
             <div

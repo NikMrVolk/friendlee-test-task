@@ -1,18 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
-export default function NavLink({
-    href = '#',
-    wrapperClassName = '',
-    text,
-    activateMouse,
-    disableMouse,
-}) {
+import { LayoutContext } from '../../context/LayoutContext'
+
+export default function NavLink({ href = '#', wrapperClassName = '', text }) {
+    const { activationMouseHover, disableMouseHover } = useContext(LayoutContext)
+
     return (
         <a
             href={href}
             className={`${wrapperClassName ? 'nav-link ' + wrapperClassName : 'nav-link'}`}
-            onMouseEnter={activateMouse}
-            onMouseLeave={disableMouse}
+            onMouseEnter={activationMouseHover}
+            onMouseLeave={disableMouseHover}
         >
             <div>
                 <div className="nav-link__text-top">{text}</div>
