@@ -34,6 +34,7 @@ a {
     justify-content: space-between;
     transform: translateY(-110%);
     transition: 600ms;
+    animation: headerStartShow 1200ms;
     &::before {
         content: '';
         position: absolute;
@@ -1085,6 +1086,16 @@ a {
             justify-content: space-between;
             flex-direction: row;
         }
+    }
+}
+
+@keyframes headerStartShow {
+    0% {
+        transform: translateY(-110%);
+    }
+
+    100% {
+        transform: translateY(0);
     }
 }
 
