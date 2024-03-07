@@ -21,7 +21,7 @@ export default function Layout({ children }) {
                 setIsBurgerActive,
             }}
         >
-            <div className={`${isBurgerActive ? 'main-page main-page-lock' : 'main-page'}`}>
+            <div className={`${isBurgerActive ? 'main-page main-page_lock' : 'main-page'}`}>
                 <Header />
                 {children}
                 <Footer />

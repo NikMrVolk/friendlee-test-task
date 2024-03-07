@@ -10,14 +10,12 @@ a {
 
 .main-page {
     color: $color-white;
-    min-height: 100svh;
     background-color: $color-black;
-}
-
-.main-page-lock {
-    position: fixed;
-    top: 0;
-    width: 100svw;
+    &_lock {
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
 }
 
 .block-wrapper {
