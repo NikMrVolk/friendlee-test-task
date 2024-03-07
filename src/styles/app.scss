@@ -280,7 +280,7 @@ a {
     transition: transform 300ms;
     pointer-events: none;
     mix-blend-mode: difference;
-    &__hover {
+    &_hover {
         transform: scale(1.66);
     }
 }

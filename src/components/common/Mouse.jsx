@@ -9,7 +9,7 @@ export default function Mouse() {
 
     return (
         <div
-            className={`${isMouseHover ? 'cursor cursor__hover' : 'cursor'}`}
+            className={`${isMouseHover ? 'cursor cursor_hover' : 'cursor'}`}
             style={{ top: `${top}px`, left: `${left}px` }}
         />
     )
