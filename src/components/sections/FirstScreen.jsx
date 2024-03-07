@@ -45,7 +45,7 @@ export default function FirstScreen() {
                         element: 'first-screen__ticker-element',
                         imgWrapper: 'first-screen__ticker-img-wrapper',
                     }}
-                    imgSrc="/public/arrow.svg"
+                    imgSrc="./arrow.svg"
                     imgAlt="стрелка"
                     style={{
                         transform: `rotate(${5 - scrollY / 150}deg) translateX(${scrollY / 3}px)`,

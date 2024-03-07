@@ -34,7 +34,7 @@ export default function Description() {
                         element: 'description__ticker-element',
                         imgWrapper: 'description__ticker-image-wrapper',
                     }}
-                    imgSrc="/public/arrow2.svg"
+                    imgSrc="./arrow2.svg"
                     imgAlt="стрелка"
                     style={{
                         transform: `rotate(${5 - scrollY / 140}deg) translateX(${
