@@ -39,7 +39,7 @@ export default function Description() {
                     style={{
                         transform: `rotate(${5 - scrollY / 140}deg) translateX(${
                             scrollY / 3
-                        }px) translateY(${scrollY / 6}px)`,
+                        }px) translateY(${scrollY / 8.5}px)`,
                     }}
                 />
             </div>
