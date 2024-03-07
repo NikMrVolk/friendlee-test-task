@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 export const useMousePosition = () => {
-    const [mousePosition, setMousePosition] = useState({ left: 0, top: 0 })
+    const [mousePosition, setMousePosition] = useState({ left: null, top: null })
 
     useEffect(() => {
         const mouseMove = (e) => {
