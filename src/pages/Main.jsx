@@ -5,6 +5,7 @@ import Header from '../components/header/Header'
 import FirstScreen from '../components/sections/FirstScreen'
 import Description from '../components/sections/Description'
 import Services from '../components/sections/Services'
+import Footer from '../components/layout/Footer'
 import { useMouseHover } from '../hooks/useMouseHover'
 
 export default function Main() {
@@ -23,9 +24,8 @@ export default function Main() {
                 <FirstScreen />
                 <Description />
                 <Services activateMouse={activationMouseHover} disableMouse={disableMouseHover} />
-                <div style={{ height: '100vh' }}></div>
-                <div style={{ height: '100vh' }}></div>
             </main>
+            <Footer activateMouse={activationMouseHover} disableMouse={disableMouseHover} />
             <Mouse isMouseHover={isMouseHover} />
         </div>
     )
